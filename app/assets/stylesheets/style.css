@@ -1,0 +1,51 @@
+body {
+    background: #141f27 !important;
+    color:#F5F8FA !important;
+    margin-top: -50px !important;
+
+   
+}
+a:any-link, a:hover, a:visited, a:link, a:active, link{
+    text-decoration: none;
+    color:#F5F8FA;
+    cursor: crosshair;
+}
+
+#cols {
+    border-right: 1px solid #657786;
+    border-top: 1px solid #657786;
+    
+}
+
+#othercols {
+    border-top: 1px solid #657786;
+   
+}
+
+#topcols {
+    border-right: 1px solid #657786;
+    
+    
+}
+
+.card {
+    background: #141f27 !important;
+    
+    
+    margin-top: 2px;
+    padding-top: 10px;
+}
+
+.psh-submit {
+    display: block;
+    float: none !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-top: 2px;
+    text-align: right; 
+}
+
+#icon {
+    
+    fill: #F5F8FA;
+}

@@ -1,0 +1,18 @@
+<%= form_with model: @post do |form|%>
+    <% if form.object.errors.any? %>
+        <h2><%= pluralize(form.object.errors.count, "error") %>
+            forced this post from being saved</h2>
+            <ul>
+                <% form.object.errors.each do |error|%>
+                <li><%= error.full_message %></li>
+                <% end %>
+            </ul>
+    <% end %>
+        
+<div class="form-group pt-2 mb-2">
+    <%= form.text_area :body, placeholder: "Pitter patter lets get at'er...", class:"form-control h-150"%>
+    <div class="psh-submit">
+        <%= form.submit "pshhh", class:"btn btn-primary btn-sm"%>
+    </div>
+</div>
+        <% end %>

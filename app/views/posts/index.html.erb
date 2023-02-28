@@ -1,0 +1,43 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-2 pt-5" id="topcols">
+        <%= link_to root_path, style:"text-decoration: none; font-size: 36px;" do %>
+                    <span class="badge">pshChat</span>
+                    <% end %>
+        </div>
+        <div class="col-md-7" id="topcols">
+        <div>
+                <%= render "form"%>
+                </div>
+        </div>
+        <div class="col-sm-3" >
+            
+            <div class="pt-2"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2 pt-2" id="cols">
+            <%= render "nav"%>
+        </div>
+        <div class="col-md-7 pt-2" id="cols">
+            
+            <div class="pt-2">
+            <%= render "display"%>
+            </div>
+        </div>
+        <div class="col-sm-3" id="othercols">
+            <div>
+                <div class="pt-5">
+                <% if user_signed_in? %> 
+                <div> Welcome <%= current_user.email %> </div> 
+                <%= button_to "Sign out", destroy_user_session_path, method: :delete, class:"btn btn-primary btn-sm" %> 
+                <% else %>
+                <%= button_to "Sign in", new_user_session_path, class:"btn btn-primary btn-sm" %> 
+                <% end %>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
