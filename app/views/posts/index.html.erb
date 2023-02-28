@@ -28,9 +28,10 @@
         </div>
         <div class="col-sm-3" id="othercols">
             <div>
-                <div class="pt-5">
+                <div class="pt-3">
                 <% if user_signed_in? %> 
-                <div> Welcome <%= current_user.email %> </div> 
+                <div> Welcome <p class="fs-4"><%= current_user.username%> </p></div>
+                <div class="text-muted"><%= current_user.email %> </div>  
                 <%= button_to "Sign out", destroy_user_session_path, method: :delete, class:"btn btn-primary btn-sm" %> 
                 <% else %>
                 <%= button_to "Sign in", new_user_session_path, class:"btn btn-primary btn-sm" %> 
