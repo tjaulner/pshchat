@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   #establish restroutes resources
   resources :posts
+  resources :profiles
   
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
