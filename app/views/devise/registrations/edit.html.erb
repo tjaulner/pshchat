@@ -7,7 +7,12 @@
     <%= f.file_field :profile_image%>
   </div>
 
-  <%= image_tag(current_user.profile_image, style:"height: 200px; border-radius: 50%;")%>
+  <% if current_user.profile_image.attached?%>
+      <%= image_tag(current_user.profile_image, style:"height: 200px; border-radius: 50%;")%>
+    <% else %>
+      <%= image_tag 'https://hips.hearstapps.com/digitalspyuk.cdnds.net/17/13/1490989105-twitter1.jpg?resize=768:*', style:"height: 30px; border-radius: 50%; padding-right: 5px;"%>
+    <% end %>
+    
 
   <div class="field">
     <%= f.label :email %><br />
