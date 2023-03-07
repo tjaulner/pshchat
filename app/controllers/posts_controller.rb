@@ -36,6 +36,18 @@ class PostsController < ApplicationController
         @post = current_user.posts.find(params[:id])
         @post.destroy
 
+        respond_to do |format|
+            if @post.destroy
+                format.turbo_stream 
+                format.html { redirect_to root_path } 
+            else
+                format.html do
+                    flash[:post_errors] = @post.errors.full_messages
+                    redirect_to root_path
+                end
+            end
+        end
+        
     end
 
     private
